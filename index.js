@@ -6,6 +6,7 @@ const state = observable({
     compC: null,
 });
 
+// 바뀔 때 마다 실행되는 함수
 autorun(() => {
     console.log('changed');
 });
@@ -24,6 +25,7 @@ const change = action(() => {
     state.compC = 'c';
 });
 
+// Action을 명시적으로 구분
 runInAction(() => {
     state.compA = 'b';
     state.compB = 25;
